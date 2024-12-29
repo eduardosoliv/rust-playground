@@ -11,6 +11,10 @@ name = "display"
 version = "0.1.0"
 
 [[package]]
+name = "display-list"
+version = "0.1.0"
+
+[[package]]
 name = "hello"
 version = "0.1.0"
 
