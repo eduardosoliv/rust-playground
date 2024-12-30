@@ -1,4 +1,4 @@
 [workspace]
 resolver = "2"
 
-members = [ "debug", "display", "display-list", "formatting","hello", "print"]
+members = [ "debug", "display", "display-list", "formatting","hello", "primitives", "print"]

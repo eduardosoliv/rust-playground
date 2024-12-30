@@ -23,5 +23,9 @@ name = "hello"
 version = "0.1.0"
 
 [[package]]
+name = "primitives"
+version = "0.1.0"
+
+[[package]]
 name = "print"
 version = "0.1.0"
