@@ -1,3 +1,8 @@
+use std::fmt;
+
+#[derive(Debug)]
+struct Matrix(f32, f32, f32, f32);
+
 pub fn tuple_extract() {
     // A tuple with a bunch of different types.
     let long_tuple = (
@@ -38,4 +43,31 @@ pub fn tuple_vs_literal() {
     // from a literal surrounded by parentheses.
     println!("One element tuple: {:?}", (5u32,));
     println!("Just an integer: {:?}", (5u32));
+}
+
+pub fn destruct_tuple() {
+    let tuple = (1, "hello", 4.5, true);
+
+    let (a, b, c, d) = tuple;
+    println!("{:?}, {:?}, {:?}, {:?}", a, b, c, d);
+}
+
+impl fmt::Display for Matrix {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        writeln!(f, "( {} {} )", self.0, self.1)?;
+        write!(f, "( {} {} )", self.2, self.3)
+    }
+}
+
+fn transpose(matrix: Matrix) -> Matrix {
+    let Matrix(a, b, c, d) = matrix;
+    Matrix(a, c, b, d)
+}
+
+pub fn matrix() {
+    let matrix: Matrix = Matrix(1.1, 1.2, 2.1, 2.2);
+    println!("Matrix:");
+    println!("{:}", matrix);
+    println!("Transpose:");
+    println!("{:}", transpose(matrix));
 }

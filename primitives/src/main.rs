@@ -1,7 +1,7 @@
 mod compound;
 use compound::{
     main::{array, tuple},
-    tuples::{pair, tuple_extract, tuple_of_tuples, tuple_vs_literal},
+    tuples::{destruct_tuple, matrix, pair, tuple_extract, tuple_of_tuples, tuple_vs_literal},
 };
 
 mod scalar;
@@ -23,4 +23,7 @@ fn main() {
     tuple_of_tuples();
     pair();
     tuple_vs_literal();
+    destruct_tuple();
+    println!("------------------");
+    matrix();
 }
