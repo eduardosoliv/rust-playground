@@ -1,5 +1,6 @@
 mod compound;
 use compound::{
+    arrays::{access_array, arrays, slices},
     main::{array, tuple},
     tuples::{destruct_tuple, matrix, pair, tuple_extract, tuple_of_tuples, tuple_vs_literal},
 };
@@ -26,4 +27,10 @@ fn main() {
     destruct_tuple();
     println!("------------------");
     matrix();
+    println!("------------------");
+    arrays();
+    println!("---");
+    slices();
+    println!("---");
+    access_array();
 }
