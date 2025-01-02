@@ -4,6 +4,9 @@ use structures::{person, points_rectangle, square, unit_pair, Point, Rectangle};
 mod enums;
 use enums::{example_use, inspect, number_color, Operations, WebEvent};
 
+mod linkedlist;
+use linkedlist::list;
+
 fn main() {
     person();
     println!("------");
@@ -49,4 +52,8 @@ fn main() {
     println!("------");
 
     number_color();
+
+    println!("------------------");
+
+    list();
 }
