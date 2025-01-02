@@ -2,7 +2,7 @@ mod structures;
 use structures::{person, points_rectangle, square, unit_pair, Point, Rectangle};
 
 mod enums;
-use enums::{inspect, Operations, WebEvent};
+use enums::{example_use, inspect, Operations, WebEvent};
 
 fn main() {
     person();
@@ -41,4 +41,8 @@ fn main() {
     let subtract: Operations = Operations::Subtract;
     println!("{:?}", subtract);
     println!("{} - {} = {}", 50, 20, subtract.exec(50, 20));
+
+    println!("------");
+
+    example_use();
 }

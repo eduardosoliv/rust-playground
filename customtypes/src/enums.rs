@@ -51,3 +51,44 @@ impl VeryVerboseEnumOfThingsToDoWithNumbers {
         }
     }
 }
+
+enum Stage {
+    Beginner,
+    Advanced,
+}
+
+enum Role {
+    Student,
+    Teacher,
+}
+
+pub fn example_use() {
+    // Explicitly `use` each name so they are available without
+    // manual scoping.
+    use Stage::{Advanced, Beginner};
+    // Automatically `use` each name inside `Role`.
+    use Role::*;
+
+    // Equivalent to `Stage::Beginner`.
+    let stage1: Stage = Beginner;
+    let stage2: Stage = Advanced;
+
+    // Equivalent to `Role::Student`.
+    let role1: Role = Student;
+    let role2: Role = Teacher;
+
+    match (stage1, stage2) {
+        // Note the lack of scoping because of the explicit `use` above.
+        (Beginner, Beginner) => println!("Both are beginners starting their learning journey!"),
+        (Beginner, Advanced) => println!("One beginner and one advanced learner!"),
+        (Advanced, Beginner) => println!("One advanced learner and one beginner!"),
+        (Advanced, Advanced) => println!("Both are advanced learners mastering their subjects!"),
+    }
+
+    match (role1, role2) {
+        (Student, Student) => println!("Two students learning together!"),
+        (Student, Teacher) => println!("A student learning from a teacher!"),
+        (Teacher, Student) => println!("A teacher guiding a student!"),
+        (Teacher, Teacher) => println!("Teachers collaborating!"),
+    }
+}
