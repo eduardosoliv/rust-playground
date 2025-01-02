@@ -2,7 +2,7 @@ mod structures;
 use structures::{person, points_rectangle, square, unit_pair, Point, Rectangle};
 
 mod enums;
-use enums::{example_use, inspect, Operations, WebEvent};
+use enums::{example_use, inspect, number_color, Operations, WebEvent};
 
 fn main() {
     person();
@@ -45,4 +45,8 @@ fn main() {
     println!("------");
 
     example_use();
+
+    println!("------");
+
+    number_color();
 }
