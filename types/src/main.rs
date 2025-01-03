@@ -4,6 +4,12 @@ use casting::{float_to_int, int_to_char, overflow};
 mod literals;
 use literals::literals;
 
+mod inference;
+use inference::inference;
+
+mod aliasing;
+use aliasing::aliasing;
+
 fn main() {
     let decimal = 65.4321_f32;
 
@@ -21,4 +27,12 @@ fn main() {
     println!("---");
 
     literals();
+
+    println!("---");
+
+    inference();
+
+    println!("---");
+
+    aliasing();
 }
