@@ -78,7 +78,7 @@ impl List {
     }
 }
 
-pub fn list() {
+pub fn linked_list() {
     let mut list: List = List::new();
 
     // Prepend some elements

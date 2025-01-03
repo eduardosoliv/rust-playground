@@ -5,7 +5,10 @@ mod enums;
 use enums::{example_use, inspect, number_color, Operations, WebEvent};
 
 mod linkedlist;
-use linkedlist::list;
+use linkedlist::linked_list;
+
+mod constants;
+use constants::{is_big, LANGUAGE, LANGUAGE2, THRESHOLD};
 
 fn main() {
     person();
@@ -55,5 +58,15 @@ fn main() {
 
     println!("------------------");
 
-    list();
+    linked_list();
+
+    println!("------------------");
+
+    let n: i32 = 16;
+
+    // Access constant in the main thread
+    println!("This is {}", LANGUAGE);
+    println!("Another language {}", LANGUAGE2);
+    println!("The threshold is {}", THRESHOLD);
+    println!("{} is {}", n, if is_big(n) { "big" } else { "small" });
 }
