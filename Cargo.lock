@@ -38,5 +38,12 @@ name = "print"
 version = "0.1.0"
 
 [[package]]
+name = "types"
+version = "0.1.0"
+dependencies = [
+ "types",
+]
+
+[[package]]
 name = "varbinding"
 version = "0.1.0"
