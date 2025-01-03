@@ -1,4 +1,4 @@
 [workspace]
 resolver = "2"
 
-members = [ "customtypes", "debug", "display", "display-list", "formatting","hello", "primitives", "print"]
+members = [ "customtypes", "debug", "display", "display-list", "formatting","hello", "primitives", "print", "varbinding"]

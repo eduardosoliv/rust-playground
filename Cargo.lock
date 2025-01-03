@@ -36,3 +36,7 @@ version = "0.1.0"
 [[package]]
 name = "print"
 version = "0.1.0"
+
+[[package]]
+name = "varbinding"
+version = "0.1.0"
