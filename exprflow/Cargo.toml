@@ -5,6 +5,6 @@ edition = "2021"
 
 [[bin]]
 name = "expressions"
-path = "src/lib/expressions.rs"
+path = "src/bin/expressions.rs"
 
 [dependencies]
