@@ -26,6 +26,10 @@ name = "display-list"
 version = "0.1.0"
 
 [[package]]
+name = "exprflow"
+version = "0.1.0"
+
+[[package]]
 name = "formatting"
 version = "0.1.0"
 
