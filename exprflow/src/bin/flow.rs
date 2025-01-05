@@ -5,6 +5,7 @@ use exprflow::flowcontrol::whiles;
 use exprflow::patternmatching::basicmatch;
 use exprflow::patternmatching::destruct;
 use exprflow::patternmatching::pointersref;
+use exprflow::patternmatching::structs;
 
 fn main() {
     ifelse::simple_example(5);
@@ -44,7 +45,12 @@ fn main() {
     destruct::destruct_array();
     println!("---");
     destruct::destruct_enums();
-
     println!("------");
+
     pointersref::pointers_ref();
+    println!("------");
+
+    structs::destruct_struct();
+    println!("---");
+    structs::destruct_struct_without_match();
 }
