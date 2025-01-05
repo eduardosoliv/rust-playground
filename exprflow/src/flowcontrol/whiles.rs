@@ -3,7 +3,7 @@
 pub fn fizzbuzz() {
     let mut n = 1;
 
-    while n < 20 {
+    while n <= 20 {
         if n % 15 == 0 {
             println!("fizzbuzz");
         } else if n % 3 == 0 {
