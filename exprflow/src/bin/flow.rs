@@ -2,6 +2,7 @@ use exprflow::flowcontrol::forloops;
 use exprflow::flowcontrol::ifelse;
 use exprflow::flowcontrol::loops;
 use exprflow::flowcontrol::whiles;
+use exprflow::patternmatching::basicmatch;
 
 fn main() {
     ifelse::simple_example(5);
@@ -28,4 +29,8 @@ fn main() {
     forloops::for_into_iter();
     println!("---");
     forloops::for_iter_mut();
+    println!("------");
+    basicmatch::match_number();
+    println!("---");
+    basicmatch::match_bool_assign();
 }
