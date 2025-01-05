@@ -1,5 +1,6 @@
 use exprflow::flowcontrol::ifelse;
-use exprflow::flowcontrol::loops::{loop_assign, loop_nesting, simple_loop};
+use exprflow::flowcontrol::loops;
+use exprflow::flowcontrol::whiles;
 fn main() {
     ifelse::simple_example(5);
     ifelse::simple_example(-1);
@@ -8,9 +9,12 @@ fn main() {
     ifelse::assign_example(5);
     ifelse::assign_example(15);
     println!("------");
-    simple_loop();
+    loops::simple_loop();
     println!("---");
-    loop_nesting();
+    loops::loop_nesting();
     println!("---");
-    loop_assign();
+    loops::loop_assign();
+    println!("------");
+    whiles::fizzbuzz();
+    println!("------");
 }
