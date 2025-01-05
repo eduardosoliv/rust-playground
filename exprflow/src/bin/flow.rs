@@ -4,6 +4,7 @@ use exprflow::flowcontrol::loops;
 use exprflow::flowcontrol::whiles;
 use exprflow::patternmatching::basicmatch;
 use exprflow::patternmatching::destruct;
+use exprflow::patternmatching::guard;
 use exprflow::patternmatching::pointersref;
 use exprflow::patternmatching::structs;
 
@@ -53,4 +54,9 @@ fn main() {
     structs::destruct_struct();
     println!("---");
     structs::destruct_struct_without_match();
+    println!("------");
+
+    guard::guard_example();
+    println!("---");
+    guard::guard_number();
 }
