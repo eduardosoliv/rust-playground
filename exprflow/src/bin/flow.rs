@@ -4,6 +4,7 @@ use exprflow::flowcontrol::loops;
 use exprflow::flowcontrol::whiles;
 use exprflow::patternmatching::basicmatch;
 use exprflow::patternmatching::destruct;
+use exprflow::patternmatching::pointersref;
 
 fn main() {
     ifelse::simple_example(5);
@@ -43,4 +44,7 @@ fn main() {
     destruct::destruct_array();
     println!("---");
     destruct::destruct_enums();
+
+    println!("------");
+    pointersref::pointers_ref();
 }
