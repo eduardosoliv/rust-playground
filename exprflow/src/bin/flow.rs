@@ -3,6 +3,7 @@ use exprflow::flowcontrol::ifelse;
 use exprflow::flowcontrol::loops;
 use exprflow::flowcontrol::whiles;
 use exprflow::patternmatching::basicmatch;
+use exprflow::patternmatching::binding;
 use exprflow::patternmatching::destruct;
 use exprflow::patternmatching::guard;
 use exprflow::patternmatching::pointersref;
@@ -59,4 +60,9 @@ fn main() {
     guard::guard_example();
     println!("---");
     guard::guard_number();
+    println!("------");
+
+    binding::binding_example();
+    println!("---");
+    binding::binding_enum();
 }
