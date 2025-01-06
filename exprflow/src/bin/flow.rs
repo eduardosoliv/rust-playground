@@ -2,6 +2,7 @@ use exprflow::flowcontrol::forloops;
 use exprflow::flowcontrol::ifelse;
 use exprflow::flowcontrol::loops;
 use exprflow::flowcontrol::whiles;
+use exprflow::lettomatch::iflet;
 use exprflow::patternmatching::basicmatch;
 use exprflow::patternmatching::binding;
 use exprflow::patternmatching::destruct;
@@ -65,4 +66,16 @@ fn main() {
     binding::binding_example();
     println!("---");
     binding::binding_enum();
+
+    println!("------");
+    iflet::awkward_match(Some(7));
+    iflet::awkward_match(None);
+    println!("---");
+    iflet::simple_let(Some(7));
+    iflet::simple_let(None);
+    println!("---");
+    iflet::let_else(Some(10));
+    iflet::let_else(None);
+    println!("---");
+    iflet::let_if_else();
 }
