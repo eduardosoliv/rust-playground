@@ -78,4 +78,6 @@ fn main() {
     iflet::let_else(None);
     println!("---");
     iflet::let_if_else();
+    println!("---");
+    iflet::if_let_match_enum();
 }

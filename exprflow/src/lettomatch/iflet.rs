@@ -38,3 +38,32 @@ pub fn let_if_else() {
         println!("I don't like letters. Let's go with an emoticon :)!");
     }
 }
+
+enum Foo {
+    Bar,
+    Baz,
+    Qux(u32),
+}
+
+pub fn if_let_match_enum() {
+    let a = Foo::Bar;
+    let b = Foo::Baz;
+    let c = Foo::Qux(100);
+
+    if let Foo::Bar = a {
+        println!("a is foobar");
+    }
+
+    if let Foo::Bar = b {
+        // no match will not print
+        println!("b is foobar");
+    }
+
+    if let Foo::Qux(value) = c {
+        println!("c is {}", value);
+    }
+
+    if let Foo::Qux(_value @ 100) = c {
+        println!("c is one hundred");
+    }
+}
