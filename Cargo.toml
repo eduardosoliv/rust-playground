@@ -1,4 +1,4 @@
 [workspace]
 resolver = "2"
 
-members = [ "conversion", "customtypes", "debug", "display", "display-list", "exprflow", "formatting","hello", "primitives", "print", "types", "varbinding"]
+members = [ "conversion", "customtypes", "debug", "display", "display-list", "exprflow", "formatting", "funcs","hello", "primitives", "print", "types", "varbinding"]

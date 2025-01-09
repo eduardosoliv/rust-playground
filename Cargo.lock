@@ -34,6 +34,10 @@ name = "formatting"
 version = "0.1.0"
 
 [[package]]
+name = "funcs"
+version = "0.1.0"
+
+[[package]]
 name = "hello"
 version = "0.1.0"
 
