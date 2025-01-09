@@ -3,6 +3,8 @@ use exprflow::flowcontrol::ifelse;
 use exprflow::flowcontrol::loops;
 use exprflow::flowcontrol::whiles;
 use exprflow::lettomatch::iflet;
+use exprflow::lettomatch::letelse;
+use exprflow::lettomatch::whilelet;
 use exprflow::patternmatching::basicmatch;
 use exprflow::patternmatching::binding;
 use exprflow::patternmatching::destruct;
@@ -80,4 +82,9 @@ fn main() {
     iflet::let_if_else();
     println!("---");
     iflet::if_let_match_enum();
+    println!("---");
+
+    assert_eq!(letelse::get_count_item("3 chairs"), (3, "chairs"));
+
+    whilelet::while_let_example(Some(5));
 }
