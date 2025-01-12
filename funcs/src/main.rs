@@ -2,7 +2,9 @@ mod closures;
 mod functions;
 mod methods;
 
-use closures::closures_example;
+use closures::{
+    closures_capturing, closures_capturing_copy, closures_capturing_move, closures_example,
+};
 use functions::{fizzbuzz_to, is_divisible_by};
 use methods::methods_example;
 fn main() {
@@ -22,4 +24,9 @@ fn main() {
     closures_example();
 
     println!("------");
+
+    closures_capturing();
+    println!("---");
+    closures_capturing_move();
+    closures_capturing_copy();
 }
