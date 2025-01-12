@@ -1,6 +1,8 @@
+mod closures;
 mod functions;
 mod methods;
 
+use closures::closures_example;
 use functions::{fizzbuzz_to, is_divisible_by};
 use methods::methods_example;
 fn main() {
@@ -14,4 +16,10 @@ fn main() {
     println!("------");
 
     methods_example();
+
+    println!("------");
+
+    closures_example();
+
+    println!("------");
 }
