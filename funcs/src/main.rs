@@ -1,10 +1,12 @@
 mod closures;
+mod closures_input_params;
 mod functions;
 mod methods;
 
 use closures::{
     closures_capturing, closures_capturing_copy, closures_capturing_move, closures_example,
 };
+use closures_input_params::closure_input;
 use functions::{fizzbuzz_to, is_divisible_by};
 use methods::methods_example;
 fn main() {
@@ -22,11 +24,11 @@ fn main() {
     println!("------");
 
     closures_example();
-
-    println!("------");
-
+    println!("---");
     closures_capturing();
     println!("---");
     closures_capturing_move();
     closures_capturing_copy();
+    println!("---");
+    closure_input();
 }
