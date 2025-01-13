@@ -1,6 +1,7 @@
 mod closures;
 mod closures_input_params;
 mod functions;
+mod functions_params;
 mod methods;
 
 use closures::{
@@ -8,6 +9,7 @@ use closures::{
 };
 use closures_input_params::closure_input;
 use functions::{fizzbuzz_to, is_divisible_by};
+use functions_params::function_as_parameter;
 use methods::methods_example;
 fn main() {
     println!("is divisible by");
@@ -31,4 +33,8 @@ fn main() {
     closures_capturing_copy();
     println!("---");
     closure_input();
+
+    println!("------");
+
+    function_as_parameter();
 }
